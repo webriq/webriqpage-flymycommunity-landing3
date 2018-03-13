@@ -1,12 +1,12 @@
 backend:
   name: webriq-api #netlify-api
-  repo: owner/repo
+  repo: webriq/webriqpage-flymycommunity-landing3 # Updated repo details ### Original: owner/repo
   branch: master
 
 production:
   backend:
     name: webriq-api
-    repo: owner/repo # Path to your Github repository
+    repo: webriq/webriqpage-flymycommunity-landing3 # Updated repo details ### Original: owner/repo # Path to your Github repository
     branch: master # Branch to update (master by default)
 
 media_folder: "assets/img/uploads" # Folder where user uploaded files should go
