@@ -35,6 +35,21 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Author", name: "metauthor", widget: "string"}
               - {label: "Keywords", name: "metakeyword", widget: "string"}
               - {label: "Footer", name: "footer", widget: "markdown"}
+              - {label: "Web Creator", name: "footerfooterdesigned", widget: "markdown"}          
+          - label: "Content Information"
+            name: "content"
+            widget: "list"
+            fields:
+              - {label: "Your Email", name: "email", widget: "string", dom_data: [{ target: ".col.mail a", attr: "mailto" }, { target: ".contsbts li:nth-child(1) a", attr: "text" }]}
+              - {label: "Your Contact Phone Number", name: "linkcont", widget: "string", dom_data: [{target: ".contsbts li:nth-child(2) a", attr: "href"}]}              
+              - {label: "Slider Background", name: "sliderbg", widget: "image", media_folder: "assets/img"}
+              - {label: "Video Link", name: "slider_video", widget: "string"} 
+              - {label: "Video Subtitle (top)", name: "abouttext1", widget: "string"} 
+              - {label: "Video Main Title", name: "abouttitle", widget: "string"} 
+              - {label: "Video Description", name: "aboutcontent", widget: "string"} 
+              - {label: "Share Text", name: "sharetitle", widget: "string"} 
+              - {label: "Share Link (addthis)", name: "addthislink", widget: "string"} 
+              - {label: "Share Content (class)", name: "addthiscont", widget: "string"} 
 
   - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Posts"  # Used in the UI, ie.: "New Post"

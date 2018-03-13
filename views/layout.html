@@ -6,12 +6,13 @@
     <meta name='description' content='{{ metadesc }}'>
     <meta name='keywords' content='{{ metakeywords }}'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" href="{{ site.sitedata[0].icon }}" type="image/gif" sizes="16x16">
 
     <block name='title'>
-      <title>Title of Your Site</title>
-    </block>
-
-    <link rel='stylesheet' href='css/index.css' />
+      <title>{{ site.sitedata[0].sitename }}</title>
+    </block> 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
@@ -20,7 +21,9 @@
     </main>
 
     <block name='javascript'>
-      <script src='js/main.js' defer></script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="{{ site.content[0].addthislink }}"></script>
     </block>
   </body>
 </html>

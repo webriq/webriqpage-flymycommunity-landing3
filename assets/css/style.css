@@ -1,0 +1,271 @@
+@media (min-width: 1200px) {
+  .container {
+    max-width:1250px;
+  }
+}
+
+#head {
+  background-color:#1e1e1e;
+  padding:12px;
+}
+
+#head .logohere img {
+  width:100px;
+}
+
+.contright ul {
+  padding:0px;
+  margin:0px;
+  text-align:right;
+}
+
+.contright ul li {
+  padding:0px;
+  display:inline-block;
+}
+
+.contright ul li a {
+  color:#c4c4c4;
+  font-size:14px;
+  font-weight:100;
+  letter-spacing:1px;
+}
+
+.contright ul li a:hover {
+  text-decoration:none;
+}
+
+.contright ul li svg path {
+  fill:#c4c4c4;
+}
+
+.contright ul li svg {
+  position:relative;
+  top:7px;
+  margin-right:10px;
+}
+
+.contright ul li:hover:nth-child(1) a {
+  color:#fff;
+}
+
+.contright ul li:hover:nth-child(1) a svg path {
+  fill:#fff;
+}
+
+.contright ul li:nth-child(2) a {
+  background:#316edf;
+  padding:5px 25px 15px;
+  display:block;
+  color:#fff;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+.contright ul li:hover:nth-child(2) a {
+  background:#636363;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+.contright ul li:nth-child(2) {
+  margin-left:30px;
+}
+
+.contright ul li:nth-child(2) a svg path {
+  fill:#fff;
+}
+
+.at-share-btn-elements a:nth-child(1) {
+  background:#bab3b3 !important;
+}
+
+.at-share-btn-elements a:nth-child(2) {
+  background:#4661c6 !important;
+}
+
+.at-share-btn-elements a:nth-child(3) {
+  background:#469ae3 !important;
+}
+
+.at-share-btn-elements a:nth-child(4) {
+  background:#f56262 !important;
+}
+
+.at-share-btn-elements a:nth-child(5) {
+  background:#469ae3 !important;
+}
+
+#content {
+  padding:50px 0px 60px; 
+}
+
+.videohere {
+  padding:0px 30px 0px;
+}
+
+body #content iframe {
+  top:60px !important;
+  left:0;
+  width:100%;
+  opacity:1;
+  min-height:450px !important;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  #content {
+    min-width:100% !important;
+    height:100% !important;
+    top:-10% !important;
+  }
+}
+
+.videoright .detshere {
+  padding:20px 0px;
+}
+
+.videoright .detshere span {
+  color:#c4c4c4;
+  letter-spacing:1px;
+  margin-bottom:10px !important;
+  display:block;
+}
+
+.videoright .detshere h1 {
+  color:#fff;
+  letter-spacing:1px;
+  font-size:43px;
+  margin-bottom:30px !important;
+}
+
+.videoright .detshere p {
+  color:#7f7f7f;
+  letter-spacing:.5px;
+  font-size:16px;
+  line-height:1.4em;
+}
+
+.sharevidesec {
+  background:#1d1d1d;
+  padding:20px 0px 40px;
+  text-align:center;
+}
+
+.sharevidesec span.sharetits {
+  color:#fff;
+  display:block;
+  margin-bottom:20px;
+}
+
+#footer {
+  padding:20px 0px 10px;
+  background:#171717;
+}
+
+#footer .leftcopyright p {
+  color:#484848;
+  font-size:14px;
+}
+
+#footer .rightcopyright p {
+  color:#484848;
+  font-size:14px;
+  text-align:right;
+}
+
+#footer .rightcopyright p a {
+  color:#868686;
+}
+
+@media (max-width:768px) {
+  .videohere {
+    min-width:100%;
+  }
+}
+
+@media (max-width:768px) {
+  .contright {
+    position:absolute;
+    right:0;
+  }
+}
+
+@media (max-width:768px) {
+  .videoright {
+    min-width:100%;
+    text-align:center;
+  }
+}
+
+@media (max-width:768px) {
+  body #footer .col {
+    min-width:100%;
+    text-align:center !important;
+  }
+}
+
+@media (max-width:768px) {
+  body #footer .col p {
+    min-width:100%;
+    text-align:center !important;
+  }
+}
+
+@media (max-width:600px) {
+  .videohere {
+    min-width:100%;
+  }
+}
+
+@media (max-width:600px) {
+  .contright {
+    position:relative;
+    right:0;
+  }
+}
+
+@media (max-width:600px) {
+  .videoright {
+    min-width:100%;
+    text-align:center;
+  }
+}
+
+@media (max-width:600px) {
+  body #content iframe {
+    top:0px !important;
+    left:0;
+    width:100%;
+    opacity:1;
+    min-height:50px !important;
+    height:180px !important;
+  }
+}
+
+@media (max-width:600px) {
+  .contright a {
+    font-size:0px !important;
+  }
+}
+
+@media (max-width:600px) {
+  .contright li:nth-child(2) {
+    margin:0px !important;
+    padding:0px !important;
+  }
+}
+
+@media (max-width:600px) {
+  .contright li:nth-child(2) a {
+    margin:0px !important;
+    padding:8px 0px 22px 15px !important;
+    border-radius:30px;
+  }
+}
+
+@media (max-width:600px) {
+  .videoright .detshere h1 {
+    font-size:23px;
+  }
+}
+
