@@ -4,6 +4,9 @@
   }
 }
 
+body {
+  background-color: #171717 !important
+}
 #head {
   background-color:#1e1e1e;
   padding:12px;
@@ -12,7 +15,9 @@
 #head .logohere img {
   width:100px;
 }
-
+#content {
+  background-size: cover
+}
 .contright ul {
   padding:0px;
   margin:0px;
