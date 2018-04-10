@@ -4,24 +4,24 @@
         <div class="container">
             <div class="row">
                 <div class="col col-4 logohere">
-                  <img src="{{ site.content[0].logo }}" alt="">
+                  <img src="{{ site.sitedata[0].logo }}" alt="">
                 </div>
                 <div class="col col-8 contright">
                   <ul>
-                    <li>
+                    <li class="email">
                       <a href="mailto:{{ site.content[0].email }}">
                       <svg style="width:24px;height:24px" viewBox="0 0 24 24">
                           <path fill="#000000" d="M12,13L2,6.76V6C2,4.89 2.89,4 4,4H20A2,2 0 0,1 22,6V6.75L12,13M22,18A2,2 0 0,1 20,20H4C2.89,20 2,19.1 2,18V9.11L4,10.36V18H20V10.36L22,9.11V18Z" />
                       </svg>
-                        {{ site.content[0].email }}
+                      <span>{{ site.content[0].email }}</span>
                       </a>
                     </li>
-                    <li>
+                    <li class="phone">
                       <a href="tel:{{ site.content[0].linkcont }}">
                       <svg style="width:24px;height:24px" viewBox="0 0 24 24">
                           <path fill="#000000" d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
                       </svg>
-                        CALL NOW
+                        <span class="phone_number">CALL NOW</span>
                       </a>
                     </li>
                   </ul>
@@ -34,17 +34,19 @@
         <div class="container">
             <div class="row">
                 <div class="col col-8 videohere">
-                  <iframe src="https://player.vimeo.com/video/{{ site.content[0].slider_video }}" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  <iframe src="https://player.vimeo.com/video/{{ site.content[0].videoid }}?autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
                 <div class="col col-4 videoright">
                       <div class="detshere">
-                        <span>{{ site.content[0].abouttext1 }}</span>
-                        <h1>{{ site.content[0].abouttitle }}</h1>
-                        <p>{{ site.content[0].aboutcontent }}</p>
+                        <span>{{ site.sitedata[0].sitename }}</span>
+                        <h1 class="video-title">{{ site.about[0].abouttext1 }}</h1>
+                        <p class="video-description">
+                          {{ site.about[0].abouttext2 }}
+                        </p>
                       </div>
                       <div class="sharevidesec">
-                        <span class="sharetits">{{ site.content[0].sharetitle }}</span>
-                        <div class="{{ site.content[0].addthiscont }}"></div>
+                        <span class="sharetits">SHARE VIDEO</span>
+                        <div class="addthis_inline_share_toolbox_7weq"></div>
                      </div>
                 </div>
              </div>
@@ -55,13 +57,16 @@
         <div class="container">
             <div class="row">
                 <div class="col col-6 leftcopyright">
-                  <p>{{ site.sitedata[0].footer }}</p>
+                  <p>Copyright 2018 FlyMyCommunity.com | All Rights Reserved </p>
                 </div>
                 <div class="col col-6 rightcopyright">
-                  <p>{{ site.sitedata[0].footerdesigned }}</p>
+                  <p> Designed by
+                    <a href="https://www.madcrane.com/" target="_blank">Mad Crane Marketing</a> - Powered by
+                    <a href="https://webriq.services/" target="_blank">WebriQ</a>
+                  </p>
                 </div>
             </div>
         </div>
     </div>
-  </block>  
+  </block>
 </extends>
