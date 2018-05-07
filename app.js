@@ -30,10 +30,10 @@ fs.readFile('data/site.json', (err, data) => {
           "title": "vimeo",
           "url": items.sizes[i].link
         }
-        fs.writeFile('data/video.json', JSON.stringify(obj), (err) =>{
-          if(err) throw err;
-          console.log("File has been saved!")
-        })
+        // fs.writeFile('data/video.json', JSON.stringify(obj), (err) =>{
+        //   if(err) throw err;
+        //   console.log("File has been saved!")
+        // })
         return
       }
     }
