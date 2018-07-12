@@ -37,7 +37,7 @@ collections: # A list of collections the CMS should be able to edit
             name: "content"
             widget: "list"
             fields:
-              - {label: "Your Email", name: "email", widget: "string", dom_data: [{ target: ".mail a", attr: "mailto" }, { target: ".mail a span", attr: "text" }]}
+              - {label: "Your Email", name: "email", widget: "string", dom_data: [{ target: ".email a", attr: "mailto" }, { target: ".email a span", attr: "text" }]}
               - {label: "Your Contact Phone Number", name: "linkcont", widget: "string", dom_data: [{target: ".phone a", attr: "href"}]}
               - {label: "Video ID", "name": "videoid", widget: "string", dom_data: [{ target: ".videohere iframe", attr: "src", value_pattern: "https://player.vimeo.com/video/{0}?background=1" }]}
           - label: "About Information"
