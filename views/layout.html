@@ -34,6 +34,21 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Start Google Analytics -->
+    <script>
+      window.ga = window.ga || function() {
+        (ga.q = ga.q || []).push(arguments)
+      };
+      ga.l = +new Date;
+      ga('create', '{{ analytics && analytics.trackingId }}', 'auto');
+      // plugins to track events
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <script async src='https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js'></script>
+    <!-- End Google Analytics -->
   </head>
 
   <body>
@@ -45,17 +60,29 @@
       <script src="js/jquery.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
       <script src="https://cdn.rawgit.com/webriq/update_elements/master/index.js"></script>
+      <script src="https://player.vimeo.com/api/player.js"></script>
+      <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f69bb3eb4c4db8"></script>
       <script type="text/javascript">
-        function downloadJSAtOnload() {
-        var element = document.createElement("script");
-        element.src = "https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f69bb3eb4c4db8";
-        document.body.appendChild(element);
-        }
-        if (window.addEventListener)
-          window.addEventListener("load", downloadJSAtOnload, false);
-        else if (window.attachEvent)
-          window.attachEvent("onload", downloadJSAtOnload);
-        else window.onload = downloadJSAtOnload;
+        function onLoadGA(cb) { typeof ga === 'function' ? cb() : setTimeout(onLoadGA, 500) }
+        onLoadGA(function() {
+          //+ AddThis tracking start
+          function eventHandler(evt) {
+            if (evt.type == 'addthis.menu.share') {
+              ga('send', { hitType: 'event', eventCategory: 'Social Share', eventAction: 'click-' + evt.data.service });
+            }
+          }
+          // Listen to various events
+          addthis.addEventListener('addthis.menu.share', eventHandler);
+          //- AddThis tracking end
+
+          //+ Vimeo tracking start
+          var iframe = document.querySelector('iframe');
+          var player = new Vimeo.Player(iframe);
+          player.on('play', function() {
+            ga('send', { hitType: 'event', eventCategory: 'Video', eventAction: 'play' });
+          });
+          //- Vimeo tracking end
+        });
       </script>
     </block>
   </body>

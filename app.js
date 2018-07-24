@@ -1,13 +1,13 @@
-const htmlStandards = require('reshape-standard')
-const cssStandards = require('spike-css-standards')
-const jsStandards = require('spike-js-standards')
-const pageId = require('spike-page-id')
-const Records = require('spike-records')
-const env = process.env.SPIKE_ENV
-const https = require('https')
-const fs = require('fs')
-const locals = {}
-let request = require('request')
+const htmlStandards = require("reshape-standard");
+const cssStandards = require("spike-css-standards");
+const jsStandards = require("spike-js-standards");
+const pageId = require("spike-page-id");
+const Records = require("spike-records");
+const env = process.env.SPIKE_ENV;
+const https = require("https");
+const fs = require("fs");
+const locals = {};
+let request = require("request");
 
 function getVideoThumbnail() {
   return new Promise((resolve, reject) => {
@@ -53,22 +53,30 @@ function getVideoThumbnail() {
 const records = new Records({
   addDataTo: locals,
   site: { file: "data/site.json" },
-  video: { callback: getVideoThumbnail }
+  video: { callback: getVideoThumbnail },
+  analytics: { file: "data/analytics.json" }
 });
 
 module.exports = {
-  devtool: 'source-map',
-  ignore: ['**/layout.html', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
+  devtool: "source-map",
+  ignore: ["**/layout.html", "**/_*", "**/.*", "readme.md", "yarn.lock"],
   reshape: htmlStandards({
     locals: ctx => {
-      return ctx, Object.assign({ pageId: pageId(ctx) }, { deployVersion: new Date().getTime() }, locals)
+      return (
+        ctx,
+        Object.assign(
+          { pageId: pageId(ctx) },
+          { deployVersion: new Date().getTime() },
+          locals
+        )
+      );
     },
-    minify: env === 'production'
+    minify: env === "production"
   }),
   postcss: cssStandards({
-    minify: env === 'production'
+    minify: env === "production"
   }),
   babel: jsStandards(),
-  vendor: ['assets/js/**'],
+  vendor: ["assets/js/**"],
   plugins: [records]
-}
+};
