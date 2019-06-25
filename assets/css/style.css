@@ -14,6 +14,7 @@ body {
 
 #head .logohere img {
   width:100px;
+  max-width:100px;
 }
 #content {
   background-size: cover
@@ -102,7 +103,7 @@ body {
 }
 
 #content {
-  padding:50px 0px 60px; 
+  padding:50px 0px 60px;
 }
 
 .videohere {
@@ -273,4 +274,3 @@ body #content iframe {
     font-size:23px;
   }
 }
-
