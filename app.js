@@ -53,6 +53,7 @@ function getVideoThumbnail() {
 const records = new Records({
   addDataTo: locals,
   site: { file: "data/site.json" },
+  biography: { file: "data/bio.json" },
   video: { callback: getVideoThumbnail }
 });
 

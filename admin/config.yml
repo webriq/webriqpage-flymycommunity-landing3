@@ -62,6 +62,37 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Meta Description", name: "metadesc", widget: "string"}
       - {label: "Meta Keywords", name: "metakeywords", widget: "string"}
       - {label: "Banner", name: "banner", widget: "image", class: "image thumbnail", media_folder: "assets/img/uploads"}
+      
+  - name: "biography"
+    label: "Agent Biography"
+    create: false
+    files:
+      - name: "biography"
+        label: "Agent Biography"
+        file: "data/site.json"
+        description: "edit agent biography"
+        fields:
+          - label: "Agent Biography"
+            name: "biography"
+            widget: "list"
+            fields:
+              - {label: "Id", name: "num", widget: "number"}
+              - {label: "Profile Image", name: "image", widget: "image", media_folder: "assets/img"}
+              - {label: "Agent Name", name: "fullname", widget: "string"}
+              - {label: "Position", name: "position", widget: "string"}
+              - {label: "Specialties", name: "specialties", widget: "string"}
+              - {label: "License", name: "license", widget: "string"}
+              - {label: "Address", name: "address", widget: "string"}
+              - {label: "Phone Number", name: "phonenumber", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Website", name: "website", widget: "string"}
+              - {label: "Facebook", name: "facebook", widget: "string"}
+              - {label: "Instagram", name: "instagram", widget: "string"}
+              - {label: "Pinterest", name: "pinterest", widget: "string"}
+              - {label: "Twitter", name: "twitter", widget: "string"}
+              - {label: "Linkedin", name: "linkedin", widget: "string"}
+              - {label: "Shortdesc", name: "shortdesc", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown"}      
 
   - name: "filemanager"
     label: "File Manager"

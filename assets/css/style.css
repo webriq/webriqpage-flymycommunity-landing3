@@ -163,6 +163,264 @@ body #content iframe {
   margin-bottom:20px;
 }
 
+/*Biography*/
+
+#bioraphy {
+  background: url(/img/white-bg.jpg) repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  padding: 100px 0px;
+}
+
+.text-blue {
+  color: #4a7dc7 !important;
+}
+
+.card-header {
+  background: #fff;
+  width: 380px;
+}
+
+.card-header .card-img-top {
+  border-radius: 50%;
+}
+
+.card-body a {
+  color: #4b7bbe;
+}
+
+.card-body a:hover {
+  text-decoration: none;
+  color: #89b9ff;
+}
+
+.card-body .card-text a {
+  color: #4b7bbe;
+}
+
+.card-body .card-text a:hover {
+  text-decoration: none;
+  color: #89b9ff !important;
+}
+
+.card-body .email {
+  color: #4b7bbe;
+  font-weight: 200;
+}
+
+.card-body .email:hover {
+  text-decoration: none;
+  color: #89b9ff;
+}
+
+.inline .details a {
+  color: #4b7bbe;
+  font-weight: 200;
+}
+
+.inline .details a:hover {
+  text-decoration: none;
+  color: #89b9ff;
+}
+
+#bioraphy p {
+  font-weight: 200;
+  margin-bottom: 0px;
+}
+
+#bioraphy h2 {
+  position: relative;
+  z-index: 9;
+}
+
+#biography a {
+  color: #fff;
+  display: block;
+  border: solid 1px rgba(221, 221, 221, .34902);
+  width: 250px;
+  padding: 15px 30px;
+  text-align: center;
+}
+
+.user-img {
+  border: 3px solid #e5e5e5;
+  background-clip: padding-box;
+  padding: 6px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.user-img:hover {
+  border: 6px solid #89b9ff;
+}
+
+.profile {
+  margin: 0 auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+.profile img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.inline {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 3px;
+  overflow-y: scroll;
+}
+
+
+.bioraphy-row .btn {
+  position: relative;
+  padding-left: 60px;
+}
+
+.bioraphy-row .btn .info-sign {
+  background-image: url(/img/information.svg);
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  display: inline-block;
+  line-height: -16px;
+  top: 8px;
+  left: 18px;
+  top: 10px;
+}
+
+.bioraphy-row .btn:hover .info-sign {
+  background-image: url(/img/information-white.svg);
+
+}
+
+#bioraphy .card {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  /* -webkit-box-shadow: 0px 0px 3px #c3c3c3; */
+  /* box-shadow: 0px 0px 3px #c3c3c3; */
+  background: transparent;
+  border: 0px;
+}
+
+#bioraphy card-header {
+  float: left;
+}
+
+#bioraphy .card-body {
+  float: left;
+  width: 300px;
+  position: relative;
+}
+
+.card-body .card-text a {
+  color: #4b7bbe;
+  padding-left: 25px;
+}
+
+.card-body .card-text i {
+  position: absolute;
+  left: 25px;
+  margin-top: 5px;
+}
+
+.address {
+  color: #9e9e9e;
+}
+
+.address i {
+  padding-right: 5px;
+}
+
+.contact-details i {
+  color: #89b9ff;
+}
+
+.inline .details a:first-child {
+  display: inline;
+}
+
+.details p {
+  margin-bottom: 0px;
+}
+
+.details a {
+  color: #4b7bbe;
+  padding-left: 25px;
+}
+
+.details i {
+  position: absolute;
+  left: 30px;
+  margin-top: 5px;
+}
+
+.btn-blue {
+  color: #fff !important;
+  border: solid 1px rgba(221, 221, 221, .34902);
+  padding: 10px 30px;
+  text-align: center;
+  background: #4370b6;
+  border-radius: 0px;
+}
+
+.btn-blue:hover {
+  color: #4370b6 !important;
+  padding: 10px 30px;
+  text-align: center;
+  background: transparent !important;
+  border: 1px solid #4370b6 !important;
+}
+
+.btn-blue:active,
+.btn-blue:focus {
+  color: #4370b6 !important;
+  padding: 10px 30px;
+  text-align: center;
+  background: transparent !important;
+  border: 1px solid #4370b6 !important;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0rem rgba(0, 123, 255, .5) !important;
+  box-shadow: 0 0 0 0rem rgba(0, 123, 255, .5) !important;
+}
+
+.stars i {
+  color: #ffc000;
+  position: relative;
+  left: 0;
+  margin: 0;
+}
+.social {
+  display:flex !important;
+  align-items:center;
+  justify-content:flex-start
+}
+.social a {
+  border: 1px solid #4370b6;
+  margin-right:6px;
+  display:flex !important;
+  align-items:center;
+  justify-content:center;
+  border-radius:100%;
+  width:35px;
+  height:35px;
+  padding-left: 0;
+}
+.social a i {
+  position:relative;
+  left:0;
+  margin:0;
+}
+
+
 #footer {
   padding:20px 0px 10px;
   background:#171717;

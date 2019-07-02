@@ -32,7 +32,9 @@
     <link rel="shortcut icon" href='{{ site.sitedata[0].icon }}' type="img/*" />
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.0/lity.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
   </head>
 
@@ -45,7 +47,9 @@
       <script src="js/jquery.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
       <script src="https://cdn.jsdelivr.net/gh/webriq/update_elements/index.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.0/lity.js"></script>
       <script type="text/javascript">
+        $(document).on('click', '#one', lity);
         function downloadJSAtOnload() {
         var element = document.createElement("script");
         element.src = "https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59f69bb3eb4c4db8";
