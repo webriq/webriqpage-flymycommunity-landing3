@@ -59,7 +59,7 @@
           <div class="card flex-row flex-wrap">
 
             <div class="card-header border-0">
-              <img src="{{bio.image}}" class="card-img-top img-fluid" alt="biography" >
+              <img src='{{ bio.image !== " " ? bio.image : "https://i.pravatar.cc/500" }}' class="card-img-top img-fluid" alt="biography" >
             </div>
               <div class="card-body">
                 <h3 class="card-title text-white">{{bio.fullname}}</h3>
@@ -71,19 +71,41 @@
                   <i class="fas fa-star"></i>
                 </div>
                 <div class="mb-2">
-                  <p class="card-text text-white"><span class="text-white-50">Position:</span> {{bio.position}}</p>
-                  <p class="card-text text-white"><span class="text-white-50">Specialties:</span> {{bio.specialties}}</p>
-                  <p class="card-text text-white"><span class="text-white-50">License No.:</span> {{bio.license}}</p>
+                  <if condition='{{ bio.position !== " " }}'>
+                    <p class="card-text text-white"><span class="text-white-50">Position:</span> {{bio.position}}</p>
+                  </if>
+                  <if condition='{{ bio.specialties !== " " }}'>
+                    <p class="card-text text-white"><span class="text-white-50">Specialties:</span> {{bio.specialties}}</p>
+                  </if>
+                  <if condition='{{ bio.license !== " " }}'>
+                    <p class="card-text text-white"><span class="text-white-50">License No.:</span> {{bio.license}}</p>
+                  </if>
                 </div>
-                <p class="card-text"><a href="tel:{{bio.phonenumber}}"  class="phone"><i class="fas fa-mobile-alt"></i>{{bio.phonenumber}}</a></p>
-                <p class="card-text"><a href="mailto:{{bio.email}}" class="email"><i class="fas fa-envelope"></i>{{bio.email}}</a></p>
-                <p class="card-text"><a href="{{bio.website}}" class="website"><i class="fas fa-globe-americas"></i>www.{{bio.website}}</a></p>
+                <if condition='{{ bio.phonenumber !== " " }}'>
+                  <p class="card-text"><a href="tel:{{bio.phonenumber}}"  class="phone"><i class="fas fa-mobile-alt"></i>{{bio.phonenumber}}</a></p>
+                </if>
+                <if condition='{{ bio.email !== " " }}'>
+                  <p class="card-text"><a href="mailto:{{bio.email}}" class="email"><i class="fas fa-envelope"></i>{{bio.email}}</a></p>
+                </if>
+                <if condition='{{ bio.website !== " " }}'>
+                  <p class="card-text"><a href="{{bio.website}}" class="website"><i class="fas fa-globe-americas"></i>www.{{bio.website}}</a></p>
+                </if>
                 <div class="social my-3">
-                  <a href="{{bio.facebook}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                  <a href="{{bio.instagram}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                  <a href="{{bio.pinterest}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest-p"></i></a>
-                  <a href="{{bio.twitter}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                  <a href="{{bio.linkedin}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                  <if condition='{{ bio.facebook !== " " }}'>
+                    <a href="{{bio.facebook}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                  </if>
+                  <if condition='{{ bio.instagram !== " " }}'>
+                    <a href="{{bio.instagram}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                  </if>
+                  <if condition='{{ bio.pinterest !== " " }}'>
+                    <a href="{{bio.pinterest}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest-p"></i></a>
+                  </if>
+                  <if condition='{{ bio.twitter !== " " }}'>
+                    <a href="{{bio.twitter}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                  </if>
+                  <if condition='{{ bio.linkedin !== " " }}'>
+                    <a href="{{bio.linkedin}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                  </if>
                 </div>
                 <br/>
                 <a class="btn btn-primary btn-white" href="#inline-bio{{bio.num}}" role="button" data-lity>Know More</a>
@@ -96,7 +118,7 @@
                 <div class="px-4">
                 <div class="row">
                   <div class="col-4">
-                    <img src="{{bio.image}}" class="avatar img-fluid" alt="biography" >
+                    <img src='{{ bio.image !== " " ? bio.image : "https://i.pravatar.cc/500" }}' class="avatar img-fluid" alt="biography" >
                   </div>
                   <div class="col-7">
                     <h3 class="card-title">{{bio.fullname}}</h3>
@@ -108,9 +130,15 @@
                       <i class="fas fa-star"></i>
                     </div>
                     <div class="mb-2">
-                      <p><span class="text-blue">Position:</span> {{bio.position}}</p>
-                      <p><span class="text-blue">Specialties:</span> {{bio.specialties}}</p>
-                      <p><span class="text-blue">License No.:</span> {{bio.license}}</p>
+                      <if condition='{{ bio.position !== " " }}'>
+                        <p><span class="text-blue">Position:</span> {{bio.position}}</p>
+                      </if>
+                      <if condition='{{ bio.specialties !== " " }}'>
+                        <p><span class="text-blue">Specialties:</span> {{bio.specialties}}</p>
+                      </if>
+                      <if condition='{{ bio.license !== " " }}'>
+                        <p><span class="text-blue">License No.:</span> {{bio.license}}</p>
+                      </if>
                     </div>
                   </div>
                 </div>
@@ -121,16 +149,34 @@
                   <p class="pb-3">{{bio.description}}</p>
                 </div>
                 <div class="info bg-blue p-4">
-                <p><i class="fas fa-map-marker-alt"></i> {{bio.address}}</p>
-                <p><a href="tel:{{bio.phonenumber}}"><i class="fas fa-mobile-alt"></i>{{bio.phonenumber}}</a></p>
-                <p><a href="mailto:{{bio.email}}" class="email"><i class="fas fa-envelope"></i>{{bio.email}}</a></p>
-                <p><a href="//{{bio.website}}" class="website"><i class="fas fa-globe-americas"></i>www.{{bio.website}}</a></p>
+                <if condition='{{ bio.address !== " " }}'>
+                  <p><i class="fas fa-map-marker-alt"></i> {{bio.address}}</p>
+                </if>
+                <if condition='{{ bio.phonenumber !== " " }}'>
+                  <p><a href="tel:{{bio.phonenumber}}"><i class="fas fa-mobile-alt"></i>{{bio.phonenumber}}</a></p>
+                </if>
+                <if condition='{{ bio.email !== " " }}'>
+                  <p><a href="mailto:{{bio.email}}" class="email"><i class="fas fa-envelope"></i>{{bio.email}}</a></p>
+                </if>
+                <if condition='{{ bio.website !== " " }}'>
+                  <p><a href="//{{bio.website}}" class="website"><i class="fas fa-globe-americas"></i>www.{{bio.website}}</a></p>
+                </if>
                 <div class="social my-3">
-                  <a href="{{bio.facebook}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                  <a href="{{bio.instagram}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                  <a href="{{bio.pinterest}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest-p"></i></a>
-                  <a href="{{bio.twitter}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                  <a href="{{bio.linkedin}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                  <if condition='{{ bio.facebook !== " " }}'>
+                    <a href="{{bio.facebook}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                  </if>
+                  <if condition='{{ bio.instagram !== " " }}'>
+                    <a href="{{bio.instagram}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                  </if>
+                  <if condition='{{ bio.pinterest !== " " }}'>
+                    <a href="{{bio.pinterest}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest-p"></i></a>
+                  </if>
+                  <if condition='{{ bio.twitter !== " " }}'>
+                    <a href="{{bio.twitter}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                  </if>
+                  <if condition='{{ bio.linkedin !== " " }}'>
+                    <a href="{{bio.linkedin}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                  </if>
                 </div>                
               </div>
               </div>
